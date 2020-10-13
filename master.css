@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+/*  border: 1px solid red;
+  box-sizing: border-box;*/
+
+}
+
+html, body {
+  width: 100%;
+  height: 100%;  /*vh*/
+/*  background-color: black;*/
+  background-color: white;
+  scroll-behavior: smooth;
+}
+
+/*h1 {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: consolas;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 76px;
+  letter-spacing: 30px;
+}*/
+
+/*@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 12px;
+    letter-spacing: 4px;
+  }
+}*/
+
+/*.showcase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+}*/
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--primary-color) url('video/landingvid.mp4') no-repeat center
+    center/cover;
+}
+
+.video-container video {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.video-container:after {
+  content: '';
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+/*  background: rgba(0, 0, 0, 0.5);
+*/  position: absolute;
+}
+
+/*.content {
+  z-index: 2;
+}
+*/
+.noselect {
+  z-index: 0;
+  -webkit-touch-callout: none;
+ /* iOS Safari */
+  -webkit-user-select: none;
+ /* Safari */
+  -khtml-user-select: none;
+ /* Konqueror HTML */
+  -moz-user-select: none;
+ /* Firefox */
+  -ms-user-select: none;
+ /* Internet Explorer/Edge */
+  user-select: none;
+ /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */;
+}
+
+
+.mtitle {
+  position: absolute;
+  font-family: "poppins";
+  font-weight: 700px;
+  font-size: 200px;
+  color: white;
+  top: 95%;
+
+}
+.cities {
+  font-family: "poppins";
+/*  color: white;*/
+  color: black;
+  font-size: 200px;
+}
+.description {
+  font-family: "consolas";
+/*  color: white;*/
+  color: black;
+  font-size: 35px;
+}
+a {
+  color: var(--primary-color);
+    display: inline-block;
+}
+
+.title1 {
+  position: absolute;
+  top: 100%;
+  left: 35%;
+}
+
+.title2 {
+  position: absolute;
+  top: 200%;
+  left: 35%;
+}
+
+.title3 {
+  position: absolute;
+  top: 300%;
+  left: 35%;
+}
+
+.title4 {
+  position: absolute;
+  top: 400%;
+  left: 35%;
+}
+
+.title5 {
+  position: absolute;
+  top: 500%;
+  left: 35%;
+}
+
+.des1 {
+  position: absolute;
+  top: 145%;
+  left: 35%;
+}
+
+.des2 {
+  position: absolute;
+  top: 245%;
+  left: 35%;
+}
+
+.des3 {
+  position: absolute;
+  top: 345%;
+  left: 35%;
+}
+
+.des4 {
+  position: absolute;
+  top: 445%;
+  left: 35%;
+}
+
+.des5 {
+  position: absolute;
+  top: 545%;
+  left: 35%;
+}
+
+
+.box1 {
+  background-image: url("image/BurjKhalifaExterior.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 768px;
+  width: 505px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  filter: grayscale(1);
+  transition: 0.5s;
+
+
+}
+
+.box2 {
+  background-image: url("image/ShanghaiTowerExterior.png");  
+
+  height: 768px;
+  width: 505px;  
+  background-attachment: fixed;
+  position: absolute;
+  top: 200%;
+  left: 0;
+  filter: grayscale(1);
+  transition: 0.5s;
+
+
+}
+
+.box3 {
+  background-image: url("image/MeccaRoyalExterior.png");
+
+  background-attachment: fixed;
+  height: 768px;
+  width: 505px;
+  position: absolute;
+  top: 300%;
+  left: 0;
+  filter: grayscale(1);
+  transition: 0.5s;
+
+
+}
+
+.box4 {
+  background-image: url("image/PingAnExterior.png");
+
+  background-attachment: fixed;
+  height: 768px;
+  width: 505px;
+  position: absolute;
+  top: 400%;
+  left: 0;
+  filter: grayscale(1);
+  transition: 0.5s;
+
+
+}
+
+.box5 {
+  background-image: url("image/LotteWorldExterior.png");
+  background-attachment: fixed;
+  height: 768px;
+  width: 505px;
+  position: absolute;
+  top: 500%;
+  left: 0;
+  filter: grayscale(1);
+  transition: 0.5s;
+
+
+}
+
+.box6 {
+  background-image: url("image/compare.png") ;
+  background-size: initial;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 479px;
+  width: 100%;
+  position: absolute;
+  top: 650%;
+  left: 0;
+  filter: grayscale(1);
+  transition: 0.5s;
+}
+
+
+
+video {
+  transition: 3s opacity;
+}
+
+.box1:hover {
+  filter: grayscale(0);
+}
+
+.box2:hover {
+  filter: grayscale(0);
+}
+
+.box3:hover {
+  filter: grayscale(0);
+}
+
+.box4:hover {
+  filter: grayscale(0);
+}
+
+.box5:hover {
+  filter: grayscale(0);
+}
+
+

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7">
+  <title>Home</title>
+  <link rel="stylesheet" href="master.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="jquery.vide.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
+  <script src="rellax.js"></script>
+</head>
+
+<!-- <body class="noselect" data-vide-bg="video/landingvid"> -->
+
+<body class="noselect">
+
+  <div class="video-container">
+      <video src="video/landingvid_1.mp4" autoplay muted loop></video>  
+      <div class="mtitle rellax" data-rellax-speed="20">TOP 5</div>
+  </div>
+
+
+
+
+
+
+
+    <!-- Boxes behind the letters -->
+<!--     <h1>Top 10</h1> -->
+
+    <a href="">    
+      <div class="box1"></div>
+    </a>
+    <a href="">
+      <div class="box2"></div>
+    </a>
+    <a href="">
+      <div class="box3"></div>
+    </a>
+    <a href="">
+      <div class="box4"></div>
+    </a>
+    <a href="">
+      <div class="box5"></div>
+    </a>  
+
+     <div class="box6"></div>
+
+
+
+
+
+
+    <div class="title1 rellax cities wrapper" data-rellax-speed="0">Dubai</div>
+    <a href="s1/s1.html"> 
+      <div class="des1 rellax description" data-rellax-speed="0">Burj Khalifa has redefined what is possible in the design and engineering of supertall buildings. By combining cutting-edge technologies and cultural influences, the building serves as a global icon that is both a model for future urban centers and speaks to the global movement towards compact, livable urban areas.</div>
+    </a>
+
+
+    <div class="title2 rellax cities wrapper" data-rellax-speed="0">Shanghai</div>
+    <div class="des2 rellax description" data-rellax-speed="0">As the third tower in the trio of signature skyscrapers at the heart of Shanghai’s new Lujiazui Finance and Trade Zone, Shanghai Tower embodies a new prototype for tall buildings. Its curved façade and spiraling form symbolizing the dynamic emergence of modern China.</div>
+
+    <div class="title3 rellax cities wrapper" data-rellax-speed="0">Mecca</div>
+    <div class="des3 rellax description" data-rellax-speed="0">At the heart of the holiest Islamic city, Makkah Royal Clock Tower brings an air of modernization to the bustling historic center of Mecca. The tower provides comfortable accommodations for devout Muslims that make the journey to the city every year during the Hajj period.</div>
+
+    <div class="title4 rellax cities wrapper" data-rellax-speed="0">Shenzhen</div>
+    <div class="des4 rellax description" data-rellax-speed="0">Ping An Finance Center is located in the city’s Futian District and represents a new generation of the prototypical Asian skyscraper: very tall, very dense, and hyper-connected. The tower will symbolize a city which has witnessed unprecedented urban growth since becoming China’s first Special Economic Zone</div>
+
+    <div class="title5 rellax cities wrapper" data-rellax-speed="0">Seoul</div>
+    <div class="des5 rellax description" data-rellax-speed="0">Taking inspiration from traditional Korean art forms in the design of the various interior program spaces, the sleek tapered form of Lotte World Tower will stand out from Seoul’s rocky, mountainous topography. The tower is programmed with a greater variety of functions than is normally found in a tall building.</div>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  var t1 = new TimelineMax({paused: true});
+  
+  var rellax = new Rellax('.rellax');
+  
+  t1.to(".one", 0.8, {
+       y: 6,
+       rotation: 45,
+       ease: Expo.easeInOut
+  });
+  t1.to(".two", 0.8, {
+       y: -6,
+       rotation: -45,
+       ease: Expo.easeInOut,
+       delay: -0.8
+  });
+  
+  t1.to(".menu", 1, {
+       top: "0%",
+       ease: Expo.easeInOut,
+       delay: -2
+  });
+  
+  t1.staggerFrom(".menu ul li", 2, {x: -200, opacity: 0, ease:Expo.easeOut}, 0.3);
+  
+  t1.reverse();
+  $(document).on("click", ".toggle-btn", function() {
+       t1.reversed(!t1.reversed());
+  });
+  $(document).on("click", "a", function() {
+       t1.reversed(!t1.reversed());
+  });
+       $(window).scroll(function() {
+       var wintop = $(window).scrollTop(), docheight =
+  
+       $(document).height(), winheight = $(window).height();
+       var scrolled = (wintop/(docheight-winheight))*100;
+  
+       $('.scroll-line').css('width', (scrolled + '%'));
+  });
+       $(".box1").click(function() {
+    window.location = $(this).find("a").attr("href"); 
+    return true;
+  });
+  
+       $(".box1").click(function() {
+    window.location = $(this).find("a").attr("href"); 
+    return true;
+  });
+  
+  
+  // const text = baffle(".data");
+  // text.set({
+  //  characters : ' ',
+  //  speed: 120
+  // })
+  // text.start();
+  // text.reveal([3500], [2500]);
+
+
+</script>
+</body>
+
+</html>
